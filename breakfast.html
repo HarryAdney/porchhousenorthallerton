@@ -58,6 +58,10 @@
         color: #fff;
       }
 
+      .nav-link.active {
+        text-decoration: underline;
+      }
+
       .nav-scroller {
         position: relative;
         z-index: 2;
@@ -186,9 +190,11 @@
           <div class="col-lg-6 col-md-8 mx-auto mt-3">
             <p class="header_title">Porch House</p>
             <p class="lead">Northallerton's Finest Accommodation</p>
-            <p class="award fs-1">Five Star Gold Award</p>
+
             <p>68-70 High Street, Northallerton, North Yorkshire, DL7 8EG<br>
-              Tel: 01609773583 - 07542212167</p>
+              <strong>Tel: 01609773583 - 07542212167</strong>
+            </p>
+            <p><strong>For our best rates, book with us direct.</strong></p>
           </div>
         </div>
     </header>
@@ -224,12 +230,10 @@
                   <li class="nav-item">
                     <a class="nav-link" href="./local_attractions.html">Local Attractions</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./dining_out.html">Dining Out</a>
-                  </li>
-                  <li class="nav-item">
+
+                  <!-- <li class="nav-item">
                     <a class="nav-link" href="./gallery.html">Gallery</a>
-                  </li>
+                  </li> -->
                   <li class="nav-item">
                     <a class="nav-link" href="./contact.html">Contact</a>
                   </li>
@@ -271,7 +275,7 @@
           <div class="container">
             <div class="row">
               <div class="col-lg-8 col-md-6">
-                <h2>Breakfast</h2>
+                <h1>Breakfast</h1>
                 <p>The traditional Yorkshire Breakfast is renowned at Porch House, beautifully served on fine china, with crystal glasses and silver cutlery. All Aga cooked, which not only gives traditional
                   bacon and eggs more flavour it's also a much healthier option.</p>
                 <p>Choose from a buffet selection of fresh fruits, cereals, freshly squeezed orange juice and yogurt while your breakfast is cooked to order. We offer smoked Salmon from Staithes with scrambled
@@ -279,12 +283,33 @@
                   eggs are free range from Finghall And don't forget to try the home made marmalade and jams with organic bread.
                 </p>
               </div>
-              <div class="col-lg-4 col-md-6">
+              <div class="col-lg-4 col-md-6 text-left">
                 <h3>Rooms and Rates</h3>
                 <dl>
-                  <dd><a href="./four-poster-bedroom-suite.html">Four Poster Bedroom</a></dd>
-                  <dd class="active"><a href="#">King Double</a></dd>
-                  <dd><a href="./ground_floor_twin_room.html">Ground Flow Twin Bedroom</a></dd>
+                  <dd>
+                    <div class="card" style="width: 18rem;">
+                      <img src="./images/rooms/king-double-room-290x180.jpg" height="180" width="290" class="img-fluid" alt="King Double Room double bed.">
+                      <div class="card-body">
+                        <p class="card-text"><a href="./king_double_room.html">King Double Room</a></p>
+                      </div>
+                    </div>
+                  </dd>
+                  <dd>
+                    <div class="card" style="width: 18rem;">
+                      <img src="./images/rooms/ground_floor_twin_290x180.jpg" height="180" width="290" class="img-fluid" alt="King Double Room double bed.">
+                      <div class="card-body">
+                        <p class="card-text"><a href="./ground_floor_twin_room.html">Twin Room</a></p>
+                      </div>
+                    </div>
+                  </dd>
+                  <dd>
+                    <div class="card" style="width: 18rem;">
+                      <img src="./images/rooms/ground_floor_twin_290x180.jpg" height="180" width="290" class="img-fluid" alt="King Double Room double bed.">
+                      <div class="card-body">
+                        <p class="card-text"><a href="./four-poster-bedroom-suite.html">Four Poster Room</a></p>
+                      </div>
+                    </div>
+                  </dd>
                 </dl>
               </div>
             </div>
@@ -300,7 +325,7 @@
 
           <div class="col-6 d-flex align-items-start flex-column">
             <div class="mt-auto p-2">
-              <p>Porch House Guest House<br>68-70 High Street<br>Northallerton<br>North Yorkshire<br>DL7 8EG</p>
+              <address>Porch House Guest House<br>68-70 High Street<br>Northallerton<br>North Yorkshire<br>DL7 8EG</address>
               <p>&copy; Copyright Porch House Guest House, 2023. All Rights Reserved.</p>
             </div>
           </div>
