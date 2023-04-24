@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
   <head>
@@ -13,7 +13,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
     <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -198,6 +197,27 @@
         color: #fff;
       }
     </style>
+    <style>
+      img {
+        max-width: 100%;
+      }
+
+      .gallery {
+        padding: 80px 0;
+      }
+
+      .gallery img {
+        background-color: #ffffff;
+        padding: 15px;
+        width: 100%;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        cursor: pointer;
+      }
+
+      #gallery-modal .modal-img {
+        width: 100%;
+      }
+    </style>
   </head>
 
   <body>
@@ -259,38 +279,63 @@
         </div>
         </div>
       </section>
-      <section class="features">
-        <div class="album pt-5 bg-light">
-          <div class="container">
-            <div>
-              <h1>Gallery</h1>
-              <p>North Yorkshire is crammed full of incredible places to see and Northallerton, located between two National Parks, the Dales and The Moors, is well situated for easy access to both of them.</p>
-              <p>While enjoying your stay at Porch House, you might want to check out these popular attractions:</p>
-            </div>
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-              <a href="1.jpg" data-toggle="lightbox" data-gallery="my-gallery">
-                <img src="thumb-1" alt="Click To Enlarge" />
-              </a>
-              <!-- OR -->
-              <img src="thumb.jpg" data-toggle="lightbox" data-src="1.jpg" data-gallery="my-gallery" />
-              <!-- Youtube Video -->
-              <a href="https://www.youtube.com/watch?v=VIDEOID" data-toggle="lightbox" data-gallery="my-gallery">
-                <img src="thumb-2.jpg" />
-              </a>
-              <!-- Vimeo Video -->
-              <a href="https://vimeo.com/VIDEOID" data-remote="https://player.vimeo.com/video/VIDEOID" data-toggle="lightbox" data-gallery="my-gallery">
-                <img src="thumb-3" />
-              </a>
-              <!-- Instagram Post -->
-              <a href="https://instagram.com/p/POSTID/" data-toggle="lightbox" data-title="Custom Title" data-gallery="my-gallery">
-                <img src="thumb-4" />
-              </a>
+      <section class="gallery min-vh-100">
+        <div class="container">
+          <div>
+            <h1>Gallery</h1>
+            <p>North Yorkshire is crammed full of incredible places to see and Northallerton, located between two National Parks, the Dales and The Moors, is well situated for easy access to both of them.</p>
+            <p>While enjoying your stay at Porch House, you might want to check out these popular attractions:</p>
+          </div>
+        </div>
+        <div class="container-lg">
 
+          <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3">
+            <div class="col">
+              <img src="./images/gallery/four_poster_420x225.webp" class="gallery-item" alt="gallery">
             </div>
-            <div class="divider-main"></div>
+            <div class="col">
+              <img src="./images/gallery/king_double_420x225.webp" class="gallery-item" alt="King Double Room">
+            </div>
+            <div class="col">
+              <img src="./images/gallery/ground_floor_twin_420x225.webp" class="gallery-item" alt="Ground Floor Twin Bedroom">
+            </div>
+            <div class="col">
+              <img src="./images/gallery/porch-house-book0051_420x225.webp" class="gallery-item" alt="gallery">
+            </div>
+            <div class="col">
+              <img src="./images/gallery/porch-house-book0081_420x225.webp" class="gallery-item" alt="gallery">
+            </div>
+            <div class="col">
+              <img src="./images/gallery/porch-house-book012_420x225.webp" class="gallery-item" alt="gallery">
+            </div>
+            <div class="col">
+              <img src="./images/gallery/porch-house-book017_420x225.webp" class="gallery-item" alt="gallery">
+            </div>
+            <div class="col">
+              <img src="./images/gallery/porch-house-book003_420x225.webp" class="gallery-item" alt="gallery">
+            </div>
+            <div class="col">
+              <img src="./images/gallery/porch-house-book004_420x225.webp" class="gallery-item" alt="gallery">
+            </div>
+
           </div>
         </div>
       </section>
+
+      <!-- Modal -->
+      <div class="modal fade" id="gallery-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img src="" class="modal-img" alt="modal img">
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="ph-footer pt-2">
       <div class="container">
@@ -311,13 +356,14 @@
           </div>
           <div class="col-lg-3 d-flex align-items-end flex-column">
             <div class="mt-auto p-2">
-              <h6 class="hais mt-auto p-2">Website by <a href="https://harryadney.com" target="_blank">HarryAdney Internet Services</a></h6>
+              <h6 class="hais mt-auto p-2">Website by <a href="https://harryadney.com" target="_blank" rel="noopener noreferrer">HarryAdney Internet Services</a></h6>
             </div>
           </div>
         </div>
       </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 
 </html>
